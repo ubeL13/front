@@ -9,16 +9,16 @@
 <body>
     <div class="header">
         <div class="my-block">
-      <a href="main.html" class="link">Основная страница</a> <br />
+            <a href="main.html" class="link">Основная страница</a> <br />
         </div>
         <div class="my-block">
-          <a href="page2.html" class="link">Позиционирование элементов</a>
+            <a href="page2.html" class="link">Позиционирование элементов</a>
         </div>
         <div class="my-block">
-          <a href="table.html" class="link">Таблица</a>
+            <a href="table.html" class="link">Таблица</a>
         </div>
     </div>
-    <table>
+    <table id="studentsTable">
         <caption>Таблица студентов</caption>
         <tr>
             <th>id</th>
@@ -91,46 +91,46 @@
             <td>020302</td>
         </tr>
     </table>
-    <form style="margin: 50px auto; width: 400px;">
-    <fieldset>
-        <legend>Добавление данных</legend>
-        <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
-            <label for="id">ID:</label>
-            <input type="text" id="id" name="id" required>
-        </div>
-        <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
-            <label for="name">ФИО:</label>
-            <input type="text" id="name" name="name" required>
-        </div>
-        <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
-            <label for="numbers">Номер зачетной книжки:</label>
-            <input type="text" id="numbers" name="numbers" required>
-        </div>
-        <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
-            <label for="group">Номер группы:</label>
-            <input type="text" id="group" name="group" required>
-        </div>
-        <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
-            <label for="sex">Пол:</label>
-            <input type="text" id="sex" name="sex" required>
-        </div>
-        <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
-            <label for="age">Возраст:</label>
-            <input type="text" id="age" name="age" required>
-        </div>
-        <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
-            <label for="study">Форма обучения:</label>
-            <select id="study" name="study">
-                <option value="dasd">Заочная</option>
-                <option value="sfgds" selected>Очная</option>
-            </select>
-        </div>
-        <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
-            <label for="class">Направление:</label>
-            <input type="text" id="class" name="class" required>
-        </div>
-        <input type="submit" value="Добавить" style="margin-top: 10px; align-self: flex-end;">
-    </fieldset>
+    <form id="studentForm" style="margin: 50px auto; width: 400px;">
+        <fieldset>
+            <legend>Добавление данных</legend>
+            <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+                <label for="id">ID:</label>
+                <input type="text" id="id" name="id" required>
+            </div>
+            <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+                <label for="name">ФИО:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+                <label for="numbers">Номер зачетной книжки:</label>
+                <input type="text" id="numbers" name="numbers" required>
+            </div>
+            <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+                <label for="group">Номер группы:</label>
+                <input type="text" id="group" name="group" required>
+            </div>
+            <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+                <label for="sex">Пол:</label>
+                <input type="text" id="sex" name="sex" required>
+            </div>
+            <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+                <label for="age">Возраст:</label>
+                <input type="text" id="age" name="age" required>
+            </div>
+            <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+                <label for="study">Форма обучения:</label>
+                <select id="study" name="study">
+                    <option value="заочная">Заочная</option>
+                    <option value="очная" selected>Очная</option>
+                </select>
+            </div>
+            <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+                <label for="class">Направление:</label>
+                <input type="text" id="class" name="class" required>
+            </div>
+            <input type="submit" value="Добавить" style="margin-top: 10px; align-self: flex-end;">
+        </fieldset>
     </form>
     <script>
         document.getElementById('studentForm').addEventListener('submit', function(event) {
@@ -156,7 +156,6 @@
             newRow.insertCell(5).textContent = age;
             newRow.insertCell(6).textContent = study;
             newRow.insertCell(7).textContent = classValue;
-
 
             this.reset();
         });
