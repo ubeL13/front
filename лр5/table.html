@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Лабораторная работа 4</title>
+    <title>Лабораторная работа 5</title>
     <link rel="stylesheet" href="style.css"/>
     <link rel="stylesheet" href="table.css"/>
 </head>
@@ -26,7 +26,6 @@
             <th style="width: 200px;">Номер зачетной книжки</th>
             <th>Номер группы</th>
             <th>Пол</th>
-            <th>dsd5s4</th>
             <th>Возраст</th>
             <th>Форма обучения</th>
             <th>Направление</th>
@@ -40,18 +39,6 @@
             <td>20</td>
             <td>Очная</td>
             <td>020302</td>
-            <td>sd6s6</td>
-        </tr>
-        <tr>
-            <td>sdftsdr</td>
-            <td>46s55d</td>
-            <td>as465ea6</td>
-            <td>ae643ase</td>
-            <td>a46sda</td>
-            <td>a64e6</td>
-            <td>sd675r</td>
-            <td>ae47</td>
-            <td>ds6r5ss5</td>
         </tr>
         <tr>
             <td>1</td>
@@ -62,7 +49,6 @@
             <td>20</td>
             <td>Очная</td>
             <td>020302</td>
-            <td>as56446</td>
         </tr>
         <tr>
             <td>2</td>
@@ -73,7 +59,6 @@
             <td>20</td>
             <td>Очная</td>
             <td>020302</td>
-            <td>e4w65df</td>
         </tr>
         <tr>
             <td>3</td>
@@ -84,7 +69,6 @@
             <td>20</td>
             <td>Очная</td>
             <td>020302</td>
-            <td>4e5674e</td>
         </tr>
         <tr>
             <td>4</td>
@@ -95,7 +79,6 @@
             <td>20</td>
             <td>Очная</td>
             <td>020302</td>
-            <td>4e6w4es</td>
         </tr>
         <tr>
             <td>5</td>
@@ -106,7 +89,47 @@
             <td>20</td>
             <td>Очная</td>
             <td>020302</td>
-            <td>e57d7</td>
         </tr>
     </table>
+    <form style="margin: 50px auto; width: 400px;">
+    <fieldset>
+        <legend>Добавление данных</legend>
+        <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+            <label for="id">ID:</label>
+            <input type="text" id="id" name="id" required>
+        </div>
+        <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+            <label for="name">ФИО:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+            <label for="numbers">Номер зачетной книжки:</label>
+            <input type="text" id="numbers" name="numbers" required>
+        </div>
+        <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+            <label for="group">Номер группы:</label>
+            <input type="text" id="group" name="group" required>
+        </div>
+        <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+            <label for="sex">Пол:</label>
+            <input type="text" id="sex" name="sex" required>
+        </div>
+        <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+            <label for="age">Возраст:</label>
+            <input type="text" id="age" name="age" required>
+        </div>
+        <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+            <label for="study">Форма обучения:</label>
+            <select id="study" name="study">
+                <option value="dasd">Заочная</option>
+                <option value="sfgds" selected>Очная</option>
+            </select>
+        </div>
+        <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+            <label for="class">Направление:</label>
+            <input type="text" id="class" name="class" required>
+        </div>
+        <input type="submit" value="Добавить" style="margin-top: 10px; align-self: flex-end;">
+    </fieldset>
+    </form>
 </body>

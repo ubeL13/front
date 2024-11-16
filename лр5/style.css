@@ -28,7 +28,7 @@ li {
 
 img {
     width: 400px;
-    height: 500px;
+    height: 400px;
 }
 
 .content {
@@ -69,7 +69,6 @@ img {
     height: auto;
     background-color: rgb(24, 11, 212);
     justify-content: right;
-
 }
 
 .container {
@@ -91,23 +90,21 @@ img {
 }
 
 .container-2 {
-    display: flex;
     background: rgb(90, 252, 158);
-    height: 600px;
-    justify-content: center;
-    align-items: center;
+    padding: 100px;
 }
 
 .block-2 {
     background: rgb(218, 135, 235);
     width: 200px;
     height: 200px;
+    margin: auto;
 }
 
 .container-3 {
     display: flex;
-    background-color:aquamarine;
-    border: 10px solid rgb(236, 187, 172);
+    background: rgb(236, 187, 172);
+    border: 2px solid black;
     flex-wrap: wrap;
     justify-content: space-around;
 }
@@ -162,6 +159,7 @@ img {
     right: 10px;
     bottom: 10px;
 }
+
 .my-block
 {
     display: flex;
