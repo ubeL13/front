@@ -7,7 +7,6 @@ let food = { x: 5, y: 5 };
 let direction = 'right';
 let speed = 800;
 
-// Добавляем элементы управления в DOM
 const controls = document.querySelector('.controls');
 controls.innerHTML = `
   <button class="up">⬆</button>
@@ -23,7 +22,6 @@ controls.innerHTML = `
   </div>
 `;
 
-// Обработчик клавиатуры
 document.addEventListener('keydown', (e) => {
   switch (e.key) {
     case 'ArrowUp':
@@ -45,7 +43,6 @@ document.addEventListener('keydown', (e) => {
   }
 });
 
-// Обработчики кнопок управления
 document.querySelectorAll('.controls button').forEach(button => {
   button.addEventListener('click', (e) => {
     const newDirection = e.target.className;
@@ -60,12 +57,10 @@ document.querySelectorAll('.controls button').forEach(button => {
   });
 });
 
-// Управление скоростью
 document.querySelector('.speed-control input').addEventListener('input', (e) => {
   speed = parseInt(e.target.value) || 800;
 });
 
-// Инициализация игрового поля
 function initializeGameBoard() {
   gameBoard.style.gridTemplateColumns = `repeat(${boardSize}, 30px)`;
   for (let row = 0; row < boardSize; row++) {
@@ -137,7 +132,6 @@ function updateScore(score) {
   document.querySelector('.score span').textContent = score;
 }
 
-// Инициализация игры
 initializeGameBoard();
 generateFood();
 
