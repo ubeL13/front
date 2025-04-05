@@ -6,8 +6,6 @@ function addTask() {
     tasks.push({ text: newTask, completed: false });
     const listItem = $('<li class="todo-item"></li>');
     const taskText = $('<span class="task-text"></span>').text(newTask);
-
-    // Создаем кнопки для каждой задачи
     const editButton = $('<button class="edit-btn">✏</button>');
     const deleteButton = $('<button class="delete-btn">Удалить</button>');
     const buttonsContainer = $('<div class="task-buttons"></div>');
@@ -15,9 +13,7 @@ function addTask() {
     buttonsContainer.append(editButton, deleteButton);
     listItem.append(taskText, buttonsContainer);
 
-    // Обработчик клика по задаче (отметка выполненной)
     listItem.on('click', function(e) {
-      // Проверяем, что клик был не по кнопке
       if (!$(e.target).is('button')) {
         const index = $(this).index();
         tasks[index].completed = !tasks[index].completed;
@@ -33,9 +29,8 @@ function addTask() {
       $(this).closest('li').remove();
     });
 
-    // Обработчик кнопки редактирования
     editButton.on('click', function(e) {
-      e.stopPropagation(); // Предотвращаем всплытие события
+      e.stopPropagation();
       const listItem = $(this).closest('li');
       const index = listItem.index();
       const currentText = tasks[index].text;
