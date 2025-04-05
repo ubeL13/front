@@ -13,6 +13,7 @@ body {
   border-bottom: 1px solid #ccc;
   cursor: pointer;
 }
+
 .completed {
   text-decoration: line-through;
   color: #888;
